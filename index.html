@@ -5,9 +5,14 @@
 <script src="https://boryacraft2d.000webhostapp.com/api/api.js">
 </script>
 <script>
+window.onload = function() {
 var api = new CatAPI();
 api.oauth("49829");
 api.link = "https://boryagames.github.io/boryacraft-app-1/";
+var link = api.getModLink();
+document.body.innerHTML = `<a href="${link}">${link}</a>`;
+api.enable();
+}
 </script>
 </head>
 <body>
